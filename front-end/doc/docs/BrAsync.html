@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>BrAsync - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="BrApp.html">BrApp</a></li><li><a href="BrAsync.html">BrAsync</a></li><li><a href="BrDebug.html">BrDebug</a></li><li><a href="BrHtml.html">BrHtml</a></li><li><a href="BrHtmlElement.html">BrHtmlElement</a></li><li><a href="BrHtmlElementItem.html">BrHtmlElementItem</a></li></ul><h3>Global</h3><ul><li><a href="global.html#br">br</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">BrAsync</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        
+            Namespace
+        
+        </h2>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+
+    
+
+    <h4 class="name" id="BrAsync">BrAsync</h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>비동기 서비스를 처리 하며,
+프로세스간 메시지를 주고 받을 수 있는 코루틴 입니다.</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>await</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="BrAsync.html#.await">BrAsync.await</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>비동기 서비스를 활성화 합니다. (비동기 대기)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>suspend</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="BrAsync.html#.suspend">BrAsync.suspend</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>비동기 서비스 활성화 시 호출 될 함수를 등록 합니다. (비동기 수행)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resolve</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="BrAsync.html#.resolve">BrAsync.resolve</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>대기 대상에 정상 처리를 반환 합니다. (비동기 귀결)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>reject</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="BrAsync.html#.reject">BrAsync.reject</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>대기 대상에 예외를 반환 합니다. (비동기 거부)</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+
+    
+
+    <h4 class="name" id=".await"><span class="type-signature"></span>await<span class="signature">(key, data<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;any>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p><a href="BrAsync.html">BrAsync</a><br>
+BrAsync.await<br></p>
+<p>비동기 서비스를 활성화 하며,
+다른 프로세스에서 처리 완료까지 대기 합니다.<br>
+<a href="BrAsync.html#.resolve">BrAsync.resolve</a>(비동기 귀결),
+<a href="BrAsync.html#.reject">BrAsync.reject</a>(비동기 거부)를
+통해 비동기 서비스를 완료 합니다.</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-examples">Example</h5>
+    
+    <pre class="prettyprint"><code>// 비동기 서비스 호출, 프로세스 완료 까지 대기 합니다.// <a href="BrAsync.html#.suspend">BrAsync.suspend</a>에 등록한 경우 해당 키값의 함수를 실행 합니다.// 정상완료: then 으로 결과값 반환 합니다.// 예외완료: catch 로 예외값 반환 합니다.app.async.await('coMessage', {a:1})    .then(result=> {        // result: <a href="BrAsync.html#.resolve">BrAsync.resolve</a>에서 전달한 인자값 {b:1}        app.debug.success('coMessage', '비동기 처리 완료', result);    })    .catch(reason=> {        // reason: <a href="BrAsync.html#.reject">BrAsync.reject</a>에서 전달한 인자값 {c:1}        app.debug.danger('coMessage', '비동기 처리 거부', reason);    })    .finally(_=> {        app.debug.info('coMessage', '비동기 완료');    });// async / await 키워드를 사용한 축약법async function fetchMessage(payload) {    const result= await app.async.await('coMessage', payload);    app.debug.success('coMessage', '비동기 처리 완료', result);    return result;}</code></pre>
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>등록키</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>전달값: 비동기 수행 함수에 전달 됩니다.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;any></span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+            
+                
+
+    
+
+    <h4 class="name" id=".reject"><span class="type-signature"></span>reject<span class="signature">(key, reason)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p><a href="BrAsync.html">BrAsync</a><br>
+BrAsync.reject<br></p>
+<p>비동기 서비스를 거부 처리 하며,
+활성화한 대상 프로세스(<a href="BrAsync.html#.await">BrAsync.await</a>)에 예외를 반환 합니다.</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-examples">Example</h5>
+    
+    <pre class="prettyprint"><code>// 비동기 서비스를 거부 합니다.// <a href="BrAsync.html#.await">BrAsync.await</a>의 `catch`로 되돌아 갑니다.app.async.reject('coMessage', {c:1});</code></pre>
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>등록키</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>reason</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>예외에 대한 값으로 <a href="BrAsync.html#.await">BrAsync.await</a>에서 <code>catch</code>메소드를 통해 제공 됩니다.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    <h4 class="name" id=".resolve"><span class="type-signature"></span>resolve<span class="signature">(key, receive)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p><a href="BrAsync.html">BrAsync</a><br>
+BrAsync.resolve<br></p>
+<p>비동기 서비스를 귀결 하며,
+활성화한 대상 프로세스(<a href="BrAsync.html#.await">BrAsync.await</a>)에 정상 처리를 반환 합니다.</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-examples">Example</h5>
+    
+    <pre class="prettyprint"><code>// 비동기 서비스를 정상 귀결 합니다.// <a href="BrAsync.html#.await">BrAsync.await</a>의 `then`으로 되돌아 갑니다.app.async.resolve('coMessage', {b:1});</code></pre>
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>등록키</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>receive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>반환값 으로 <a href="BrAsync.html#.await">BrAsync.await</a>에서 <code>then</code>메소드를 통해 제공 됩니다.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    <h4 class="name" id=".suspend"><span class="type-signature"></span>suspend<span class="signature">(key, procedure)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p><a href="BrAsync.html">BrAsync</a><br>
+BrAsync.suspend<br></p>
+<p>비동기 서비스 활성화 시 호출 되는 함수 입니다.</p></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-examples">Example</h5>
+    
+    <pre class="prettyprint"><code>// 비동기 수행 함수 등록app.async.suspend('coMessage', param=> {    // param: <a href="BrAsync.html#.await">BrAsync.await</a>에서 전달한 인자값 {a:1}    app.debug.info('coMessage', '비동기 수행 >> 전달받은 값', param);});</code></pre>
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>등록키</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>procedure</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>(data: any)=&gt; void<br><br>
+비동기 활성화 시 호출되는 함수로 <a href="BrAsync.html#.await">BrAsync.await</a>에서 입력한 값을 매개변수로 제공 받습니다.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Mon Apr 03 2023 23:07:56 GMT+0900 (대한민국 표준시) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
