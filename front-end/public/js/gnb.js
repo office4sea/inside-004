@@ -27,7 +27,7 @@ app(_=> {
             function _initDisplay() {
                 app.debug.log('접속 경로:', location.pathname);
                 [
-                    {nav: vo.navHome, href: '/'},
+                    {nav: vo.navHome, href: '/page/home.html'},
                     {nav: vo.navForm, href: '/page/form.html'},
                     {nav: vo.navAsync, href: '/page/async.html'},
                     {nav: vo.navBridge, href:'/page/bridge.html'},
@@ -47,7 +47,7 @@ app(_=> {
                     ]),
                     el.ul({class:'nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0'}, [
                         el.li([
-                            el.a('Home', {dataVo:'navHome', href:'/', class:'nav-link px-2 text-secondary'})
+                            el.a('Home', {dataVo:'navHome', href:'/page/home.html', class:'nav-link px-2 text-secondary'})
                         ]),
                         el.li([
                             el.a('입력폼', {dataVo:'navForm', href:'/page/form.html', class:'nav-link px-2 text-secondary'})

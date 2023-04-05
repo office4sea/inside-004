@@ -1,7 +1,7 @@
 /**@type {App} */
 const app= br('brApp', app=> {
     app.debug(1);
-    app.debug.log('app.log', 1);
+    app.debug.log('app.log', app.version);
     app.debug.warn('app.warn', 1);
     app.debug.error('app.error', 1);
 
