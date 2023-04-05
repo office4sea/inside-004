@@ -27,12 +27,12 @@ app(_=> {
             function _initDisplay() {
                 app.debug.log('접속 경로:', location.pathname);
                 [
-                    {nav: vo.navHome, href: '/page/home.html'},
-                    {nav: vo.navForm, href: '/page/form.html'},
-                    {nav: vo.navAsync, href: '/page/async.html'},
-                    {nav: vo.navBridge, href:'/page/bridge.html'},
+                    {nav: vo.navHome, href: 'home.html'},
+                    {nav: vo.navForm, href: 'form.html'},
+                    {nav: vo.navAsync, href: 'async.html'},
+                    {nav: vo.navBridge, href:'bridge.html'},
                 ].forEach(({nav, href})=> {
-                    if(location.pathname == href) nav.clss.remove('text-secondary').add('text-white');
+                    if(RegExp(`${href}$`).test(location.pathname)) nav.clss.remove('text-secondary').add('text-white');
                     else {
                         nav.clss.add('text-secondary');
                     }
@@ -47,16 +47,16 @@ app(_=> {
                     ]),
                     el.ul({class:'nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0'}, [
                         el.li([
-                            el.a('Home', {dataVo:'navHome', href:'/page/home.html', class:'nav-link px-2 text-secondary'})
+                            el.a('Home', {dataVo:'navHome', href:'home.html', class:'nav-link px-2 text-secondary'})
                         ]),
                         el.li([
-                            el.a('입력폼', {dataVo:'navForm', href:'/page/form.html', class:'nav-link px-2 text-secondary'})
+                            el.a('입력폼', {dataVo:'navForm', href:'form.html', class:'nav-link px-2 text-secondary'})
                         ]),
                         el.li([
-                            el.a('비동기&코루틴', {dataVo:'navAsync', href:'/page/async.html', class:'nav-link px-2 text-secondary'})
+                            el.a('비동기&코루틴', {dataVo:'navAsync', href:'async.html', class:'nav-link px-2 text-secondary'})
                         ]),
                         el.li([
-                            el.a('브릿지', {dataVo:'navBridge', href:'/page/bridge.html', class:'nav-link px-2 text-secondary'})
+                            el.a('브릿지', {dataVo:'navBridge', href:'bridge.html', class:'nav-link px-2 text-secondary'})
                         ]),
                     ]),
                     el.form({class:'col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3', role:'search'}, [
